@@ -15,7 +15,11 @@ function escrevendoLetra() {
 }
 escrevendoLetra();
 
-const ativaMenu = document.querySelector('.fa-bars');
+const ativaMenu = document.querySelector('.fa-bars'); //vou no documento buscar o seletor
+const navMenu = document.querySelector('header .navegacao-primaria');//no nosso header vamos pegar a navegação primária
+
+
 ativaMenu.addEventListener('click', ()=>{
     ativaMenu.classList.toggle('fa-x') //adiciona a terceira classe no documento e faz um X no click do menu
+    navMenu.classList.toggle('ativado')//quando eu clicar no menu o navMenu ativa classe da tag que é incluida fa-x
 })
