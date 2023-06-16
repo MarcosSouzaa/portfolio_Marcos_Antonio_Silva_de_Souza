@@ -39,7 +39,7 @@ header .navegacao-primaria {
     align-items: center;
 }
 
-header .navegacao-primaria li a { 
+header .navegacao-primaria li a {
     color: #fff;
     width: 0px;
     height: 0px;
@@ -55,10 +55,13 @@ header .navegacao-primaria li a::after {
     transition: .9s;
 }
 
-header .navegacao-primaria li a:hover::after { /*quando o mouse estiver flutuando sobre o local, ele fala com after acima*/
+header .navegacao-primaria li a:hover::after {
+    /*quando o mouse estiver flutuando sobre o local, ele fala com after acima*/
     width: 100%;
-    height: 0px; /*sem aumentar altura*/
-    padding: 0px; /*sem crescer nada*/
+    height: 0px;
+    /*sem aumentar altura*/
+    padding: 0px;
+    /*sem crescer nada*/
     border-bottom: 4px solid #dc3545;
 
 }
@@ -140,7 +143,7 @@ header .navegacao-primaria li a:hover::after { /*quando o mouse estiver flutuand
     }
 
     to {
-        opacity: 0;   
+        opacity: 0;
     }
 }
 
@@ -153,200 +156,221 @@ header .navegacao-primaria li a:hover::after { /*quando o mouse estiver flutuand
     to {
         opacity: 1;
         transform: translate3d(0, 0, 0);
-    }   
+    }
 }
 
- /*SEÇÃO PRINCIPAL SOBRE MIM*/
+/*SEÇÃO PRINCIPAL SOBRE MIM*/
 
- main {
+main {
     background-color: #111;
     color: white;
- }
+}
 
- /*article - vou dividir em três colunas*/
- main .sobre {  
-    margin-top: 60px;  
+/*article - vou dividir em três colunas*/
+main .sobre {
+    margin-top: 60px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
     justify-content: center;
     padding: 40px;
 
- }
+}
 
- .sobre_titulo {
-    margin: 30px 0; /*30 px pra cima e pra baixo e zero para os lados*/
-    grid-column: 1/-1; /*da coluna 1 até a última coluna*/
+.sobre_titulo {
+    margin: 30px 0;
+    /*30 px pra cima e pra baixo e zero para os lados*/
+    grid-column: 1/-1;
+    /*da coluna 1 até a última coluna*/
     text-align: center;
     color: #fff;
- }
+}
 
- .sobre_titulo h1 {
+.sobre_titulo h1 {
     font-size: 2.5rem;
     color: #ff5d56;
+    margin-bottom: 15px;
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.sobre_titulo p {
+    color: #707070;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
     position: relative;
- }
+}
 
- .sobre_titulo div {
+.sobre_titulo div {
     display: flex;
     gap: 10px;
     justify-content: center;
- }
+}
 
- .sobre_titulo span {
+.sobre_titulo span {
     display: block;
     height: 20px;
     width: 20px;
     border-radius: 50%;
     background-color: #dc3545;
- }
+}
 
 /*As duas classes fazem  transição para desfocado*/
- .sobre img {
-    animation: ladoSecao .5s ease-in-out forwards;
+.sobre img {
+    animation: sideSection .5s ease-in-out forwards;
     cursor: pointer;
     grid-row: 2;
     max-width: 100%;
-    border-radius:10px;
+    border-radius: 4px;
     filter: blur(0);
- }
+}
 
- .sobre img:hover {
+.sobre img:hover {
     transition: .5 ease-in;
     filter: blur(1px);
- }
+}
 
- .sobre_conteudo {
-    animation: sobeSecao .6s ease-in-out forwards;
-    grid-column: 2/-1; /*da coluna 2 até a última coluna*/
+.sobre_conteudo {
+    animation: upSection .6s ease-in-out forwards;
+    grid-column: 2/-1;
+    /*da coluna 2 até a última coluna*/
     display: grid;
     color: #707070;
     grid-template-columns: 1fr 1fr;
- }
+}
 
- .sobre_texto {
+.sobre_texto {
     display: grid;
     grid-column: 1/-1;
     grid-template-columns: 1fr 1fr;
- }
+}
 
- .sobre_texto h1 {
+.sobre_texto h1 {
     font-size: 2.3rem;
     color: #fff;
     grid-column: 1/-1;
- }
+}
 
- .sobre_texto h1::after {
+.sobre_texto h1::after {
     background-color: #ff5d56;
     height: 6px;
     width: 60px;
     margin: 20px 0;
-    content: ''; /*tem que ter esse conteúdo vazio*/
+    content: '';
+    /*tem que ter esse conteúdo vazio*/
     display: block;
     border-radius: 5px;
- }
+}
 
- .sobre p {
-     
-     margin: 20px;
-     font-size: 1.2rem;
- }
+.sobre p {
 
- .sobre_titulo p{
     margin: 20px;
     font-size: 1.2rem;
- }
+}
 
- .sobre_texto p {
-     font-size: 1.3rem;
-     grid-row: 2;
-     grid-column: 1/-1;
-     text-align: justify;
- }
+.sobre_titulo p {
+    margin: 20px;
+    font-size: 1.2rem;
+}
 
- .sobre_info {
+.sobre_texto p {
+    font-size: 1.3rem;
+    grid-row: 2;
+    grid-column: 1/-1;
+    text-align: justify;
+}
+
+.sobre_info {
     margin-top: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column: 1/-1;
     gap: 15px;
     align-items: center;
- }
+}
 
- .sobre_info i {
+.sobre_info i {
     color: #dc3545;
     display: inline-block;
     padding-right: 15px;
     font-size: 1.5rem;
- }
+}
 
- .sobre_info p {
+.sobre_info p {
     font-size: .9rem;
- }
+}
 
- @keyframes sobeSecao {
+@keyframes sobeSecao {
     from {
         transition: .5s;
         transform: translate3d(60px, 0, 0);
     }
-    to{
+
+    to {
         transform: translate3d(0, 0, 0);
     }
 }
 
-    @keyframes ladoSecao {
-        from {
-            transition: .5s;
-            transform: translate3d(-60px, 0, 0);
-        }
-        to{
-            transform: translate3d(0, 0, 0);
-        }
- }
+@keyframes ladoSecao {
+    from {
+        transition: .5s;
+        transform: translate3d(-60px, 0, 0);
+    }
 
- /*Responsivo*/
- @media(max-width: 992px){
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/*Responsivo*/
+@media(max-width: 992px) {
     .section-div img {
-        display: none;        
+        display: none;
     }
 
     .section-div {
         background-image: url(img/marcos.png);
         background-repeat: no-repeat;
-        background-size: cover;               
+        background-size: cover;
     }
 
     header {
-        justify-content: space-between; /*coloca o meu Portfólio no canto*/
-        padding: 30px 70px; /*30px pra cima  pra baixo e 70px paara um lado e pro outro*/
+        justify-content: space-between;
+        /*coloca o meu Portfólio no canto*/
+        padding: 30px 70px;
+        /*30px pra cima  pra baixo e 70px paara um lado e pro outro*/
     }
 
     header .navegacao-primaria {
-        display: none ; /*some o conteúdo*/
+        display: none;
+        /*some o conteúdo*/
+    }
+
+    header {
+        justify-content: space-between;
+        padding: 30px 70px;
     }
 
     header i {
         color: #f7f7f7;
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     header .navegacao-primaria.ativado {
-    background: linear-gradient(rgba(43, 42, 42, 0.176), rgba(46, 46, 46, 0.724));
-    position: absolute;
-    display: grid;
-    top: 80px;
-    color: white;
-    z-index: 1;
-    padding: 30px; /*padding p/mobile tem que ser alto pelo espaçamento dos ítens*/
-    font-size: 1.6rem;
-    font-weight: bold;
-    border-radius: 0 0 4px 4px;
-    right: 20px;
-    animation: sobeSecao .8s ease-in-out forwards;
+        background: linear-gradient(rgba(43, 42, 42, 0.176), rgba(46, 46, 46, 0.724));
+        position: absolute;
+        display: grid;
+        top: 80px;
+        color: white;
+        z-index: 1;
+        padding: 30px;
+        /*padding p/mobile tem que ser alto pelo espaçamento dos ítens*/
+        font-size: 1.3rem;
+        font-weight: bold;
+        border-radius: 0 0 4px 4px;
+        right: 20px;
+        animation: sobeSecao .8s ease-in-out forwards;
+    }
 
- }
- @media(max-width: 992px){
     .sobre img {
         grid-column: 1/-1;
         justify-self: center;
@@ -355,28 +379,33 @@ header .navegacao-primaria li a:hover::after { /*quando o mouse estiver flutuand
     .sobre_conteudo {
         grid-column: 1/-1;
     }
- }
+}
 
- /*Seção Service*/
- .services {
+/*Seção Service*/
+.services {
     margin-top: -30px;
-    padding: 60px; /*Mais ao centro com espaçamento na borda*/
-    background-color: #151515;
- }
- .my_services {
     padding: 60px;
-    color: white;
- }
+    /*Mais ao centro com espaçamento na borda*/
+    background-color: #151515;
+}
 
- .my_services ul {
-    display: flex; /*Fica um ítem ao lado do outro*/
-    flex-wrap: wrap; /*se ajusta ao conteúdo quando diminui o site*/
-    gap: 20px; /*Espaço para todos os lados*/
+.my_services {
+    padding: 60px;
+    color: #fff;
+}
+
+.my_services ul {
+    display: flex;
+    /*Fica um ítem ao lado do outro*/
+    flex-wrap: wrap;
+    /*se ajusta ao conteúdo quando diminui o site*/
+    gap: 20px;
+    /*Espaço para todos os lados*/
     align-items: center;
     justify-content: center;
- }
+}
 
- .my_services ul li {
+.my_services ul li {
     cursor: pointer;
     border-radius: 6px;
     position: relative;
@@ -384,37 +413,38 @@ header .navegacao-primaria li a:hover::after { /*quando o mouse estiver flutuand
     display: grid;
     gap: 30px;
     text-align: center;
-    max-width:300px;
+    max-width: 300px;
     align-content: center;
     height: 300px;
     background-color: #222;
- }
+}
 
- .my_services ul li i {
-      font-size: 2.7rem;
-      color:#dc3545 ;
- }
+.my_services ul li i {
+    font-size: 2.7rem;
+    color: #dc3545;
+}
 
- .my_services ul li h3 {
+.my_services ul li h3 {
     color: #fff;
     font-size: 1.6rem;
-    font-family: poppins;
+    font-family: 'poppins';
     font-weight: 500;
- } 
+}
 
- .my_services ul li p {
+.my_services ul li p {
     color: #707070;
     font-size: 1.1rem;
- }
+}
 
- /*Pseudo classes*/
+/*Pseudo classes*/
 .my_services li::before {
     content: '';
     transition: .5s ease-in-out;
     border-radius: 6px;
     width: 0px;
     height: 0px;
-    position: absolute; /*só vai conseguir ser absoluto se tiver um pai relativo*/
+    position: absolute;
+    /*só vai conseguir ser absoluto se tiver um pai relativo*/
     top: -2px;
     right: -2px;
     border-top: 2px solid transparent;
@@ -427,12 +457,14 @@ header .navegacao-primaria li a:hover::after { /*quando o mouse estiver flutuand
     border-radius: 6px;
     width: 0px;
     height: 0px;
-    position: absolute; /*só vai conseguir ser absoluto se tiver um pai relativo*/
+    position: absolute;
+    /*só vai conseguir ser absoluto se tiver um pai relativo*/
     bottom: -2px;
     left: -2px;
     border-bottom: 2px solid transparent;
     border-left: 2px solid transparent;
 }
+
 /*Quando o mouse estiver sobre, vai fazer um efeito de transição*/
 .my_services li:hover::before {
     width: 100%;
@@ -446,4 +478,136 @@ header .navegacao-primaria li a:hover::after { /*quando o mouse estiver flutuand
     height: 100%;
     border-bottom: 2px solid red;
     border-left: 2px solid red;
+}
+
+.my_resume {
+    color: #ffff;
+}
+
+.resume_generico {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /*duas colunas*/
+    justify-content: center;
+    gap: 10px;
+    align-items: start;
+}
+
+.resume_generico h2 {
+    font-family: 'poppins';
+    font-size: 1.5rem;
+    background-color: #ff5d56;
+    justify-self: start;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.resume_generico h2 i {
+    margin-right: 10px;
+}
+
+.experiencia {
+    margin-bottom: 30px;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.educacao {
+    margin-bottom: 30px;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.experiencia_conteudo ul {
+    color: #ff5d56;
+    gap: 10px;
+    display: flex;
+    cursor: pointer;
+    /*Para animação no javascript*/
+    margin-top: 20px;
+    justify-content: center;
+    /*Centraliza no meio da div*/
+}
+
+.resume_generico .experiencia_conteudo div {
+    background-color: #222;
+    padding: 40px;
+    position: relative;
+    /*Esse é o pai*/
+}
+
+/*Aqui a animação é o filho*/
+.resume_generico .experiencia_conteudo div::before {
+    content: '';
+    /*não coloca nada antes do conteúdo*/
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid #222;
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    display: inline-block;
+}
+
+.resume_generico .experiencia_conteudo div span {
+    color: #dc3545;
+    font-family: 'poppins';
+    font-weight: bold;
+}
+
+.resume_generico .experiencia_conteudo div h3 {
+    font-family: 'poppins';
+    margin: 10px 0; /*10px cima e baixo e 0 esq e dir*/
+}
+
+.resume_generico .experiencia_conteudo div p {
+    color: #707070;
+    font-size: larger1.1rem;
+}
+
+/*Meus diplomas e cursos*/
+
+.resume_generico .educacao_conteudo div {
+    background-color: #222;
+    padding: 32px;
+    position: relative;    
+}
+
+.educacao_conteudo ul {
+    color: #ff5d56;
+    gap: 10px;
+    display: flex;
+    cursor: pointer;
+    /*Para animação no javascript*/
+    margin-top: 20px;
+    justify-content: center;
+    /*Centraliza no meio da div*/
+}
+
+/*Aqui a animação é o filho*/
+.resume_generico .educacao_conteudo div::before {
+    content: '';
+    /*não coloca nada antes do conteúdo*/
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid #222;
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    display: inline-block;
+}
+
+.resume_generico .educacao_conteudo div span {
+    color: #dc3545;
+    font-family: 'poppins';
+    font-weight: bold;
+}
+
+.resume_generico .educacao_conteudo div h3 {
+    font-family: 'poppins';
+    margin: 10px 0; /*10px cima e baixo e 0 esq e dir*/
+}
+
+.resume_generico .educacao_conteudo div p {
+    color: #707070;
+    font-size: larger1.1rem;
 }
