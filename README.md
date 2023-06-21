@@ -9,7 +9,7 @@ Portfolio de Tecnologia
 
 # ESTE SITE ESTÁ EM CONSTRUÇÃO
 
-### Aqui estou montando um site com minha história nessa sonho de fazer parte desse grupo de desenvolvedores!
+### Aqui estou montando um site com minha história nesse sonho de fazer parte desse grupo de desenvolvedores!
 
 
 
