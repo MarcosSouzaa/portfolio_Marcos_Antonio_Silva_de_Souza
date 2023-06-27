@@ -68,7 +68,6 @@ header .navegacao-primaria li a:hover::after {
 
 
 /* Download CV Section */
-
 .section-div {
     animation: inicializar .7s forwards;
     background-color: #000;
@@ -513,12 +512,6 @@ main .sobre {
     grid-row: 1;
 }
 
-.educacao {
-    margin-bottom: 30px;
-    grid-column: 2;
-    grid-row: 1;
-}
-
 .experiencia_conteudo ul {
     color: #ff5d56;
     gap: 10px;
@@ -532,9 +525,15 @@ main .sobre {
 
 .resume_generico .experiencia_conteudo div {
     background-color: #222;
+    animation: ladoSecao .5s ease-in-out forwards; /*devagar na entrada e saida e fowards, Terminar no final*/
+    display: none;
     padding: 40px;
     position: relative;
     /*Esse é o pai*/
+}
+
+.resume_generico .experiencia_conteudo div.ativo {
+    display: block;
 }
 
 /*Aqui a animação é o filho*/
@@ -562,16 +561,34 @@ main .sobre {
 
 .resume_generico .experiencia_conteudo div p {
     color: #707070;
-    font-size: larger1.1rem;
+    font-size: larger 1.1rem;
 }
 
 /*Meus diplomas e cursos*/
 
 .resume_generico .educacao_conteudo div {
     background-color: #222;
-    padding: 32px;
+    padding: 40px;
+    display: none;
+    animation: ladoSecao .5s ease-in-out forwards;
     position: relative;    
 }
+
+.resume_generico .educacao_conteudo div.ativo{
+    display: block;
+}
+
+.education_content ul li.ativo {
+    color: #3e3d3d;
+}
+
+
+.educacao {
+    margin-bottom: 30px;
+    grid-column: 2;
+    grid-row: 1;
+}
+
 
 .educacao_conteudo ul {
     color: #ff5d56;
@@ -598,16 +615,16 @@ main .sobre {
 
 .resume_generico .educacao_conteudo div span {
     color: #dc3545;
-    font-family: 'poppins';
+    font-family: 'poppins', sans-serif;
     font-weight: bold;
 }
 
 .resume_generico .educacao_conteudo div h3 {
-    font-family: 'poppins';
+    font-family: 'poppins', sans-serif;
     margin: 10px 0; /*10px cima e baixo e 0 esq e dir*/
 }
 
 .resume_generico .educacao_conteudo div p {
     color: #707070;
-    font-size: larger1.1rem;
+    font-size: larger 1.1rem;
 }
